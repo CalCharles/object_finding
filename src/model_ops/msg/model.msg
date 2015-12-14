@@ -1,0 +1,10 @@
+int32 length
+int32 width
+bool[] grid
+int16 zumyX
+int16 zumyY
+int32[] objLstx
+int32[] objLsty
+bool dirty
+float64 foundX
+float64 foundY

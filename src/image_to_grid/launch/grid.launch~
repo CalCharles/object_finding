@@ -1,0 +1,13 @@
+<launch>
+  <arg name="mname" default="zumy1c" />
+  <arg name="zumy_tag" default="1" />
+  <arg name="origin_tag" default="9" />
+  <arg name="target_tag" default="0" />
+  <arg name="state_estimate" default="true" />
+
+
+  <node name="image_processor" pkg="image_to_grid" type="image_processor.py"  respawn="false" output="screen" />
+  <node name="tag_server" pkg="image_to_grid" type="tag_server.py"  respawn="false" output="screen" args="$(arg zumy_tag) $(arg origin_tag) $(arg target_tag) $(arg state_estimate) $(arg mname)"/>
+  <node name="grid_maker" pkg="image_to_grid" type="grid_maker.py"  respawn="false" output="screen" args="$(arg mname)"/>
+
+</launch>

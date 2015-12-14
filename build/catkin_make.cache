@@ -1,0 +1,2 @@
+ar_track_alvar:image_to_grid:kalman_zumy:lab4_cam:model_ops:odroid_machine:vision_opencv/cv_bridge:vision_opencv/image_geometry:vision_opencv/opencv_apps:vision_opencv/opencv_tests:vision_opencv/vision_opencv:zumy_teleop
+-DCATKIN_DEVEL_PREFIX=/home/cc/ee106a/fa15/class/ee106a-as/ros_ws/final_proj/devel -DCMAKE_INSTALL_PREFIX=/home/cc/ee106a/fa15/class/ee106a-as/ros_ws/final_proj/install -G Unix Makefiles

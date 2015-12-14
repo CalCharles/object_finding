@@ -1,0 +1,8 @@
+prefix=/home/cc/ee106a/fa15/class/ee106a-as/ros_ws/final_proj/install
+
+Name: opencv_tests
+Description: Description of opencv_tests
+Version: 1.11.8
+Cflags: 
+Libs: -L/home/cc/ee106a/fa15/class/ee106a-as/ros_ws/final_proj/install/lib 
+Requires: 

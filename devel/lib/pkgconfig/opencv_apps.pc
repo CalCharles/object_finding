@@ -1,0 +1,8 @@
+prefix=/home/cc/ee106a/fa15/class/ee106a-as/ros_ws/final_proj/devel
+
+Name: opencv_apps
+Description: Description of opencv_apps
+Version: 1.11.8
+Cflags: -I/home/cc/ee106a/fa15/class/ee106a-as/ros_ws/final_proj/devel/include
+Libs: -L/home/cc/ee106a/fa15/class/ee106a-as/ros_ws/final_proj/devel/lib 
+Requires: 

@@ -1,0 +1,2 @@
+set(model_ops_MESSAGE_FILES "/home/cc/ee106a/fa15/class/ee106a-as/ros_ws/final_proj/src/model_ops/msg/model.msg;/home/cc/ee106a/fa15/class/ee106a-as/ros_ws/final_proj/src/model_ops/msg/startGoal.msg;/home/cc/ee106a/fa15/class/ee106a-as/ros_ws/final_proj/src/model_ops/msg/objectOp.msg;/home/cc/ee106a/fa15/class/ee106a-as/ros_ws/final_proj/src/model_ops/msg/doneWith.msg;/home/cc/ee106a/fa15/class/ee106a-as/ros_ws/final_proj/src/model_ops/msg/startGoalCentroid.msg")
+set(model_ops_SERVICE_FILES "")

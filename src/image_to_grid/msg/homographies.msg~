@@ -1,0 +1,6 @@
+int32[] floorX
+int32[] floorY
+int32[] objectX
+int32[] objectY
+int8 size 
+float32 intervalSize #should always be three

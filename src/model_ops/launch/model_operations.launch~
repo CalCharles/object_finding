@@ -1,0 +1,11 @@
+<launch>
+  <arg name="mname" default="zumy1c" />
+
+
+  <node name="navigator" pkg="model_ops" type="navigator.py" args="$(arg mname)" respawn="false" output="screen" />
+  <node name="update_model" pkg="model_ops" type="update_model.py" args="$(arg mname)" respawn="false" output="screen" />
+  <node name="cell_move" pkg="model_ops" type="cell_move.py"  respawn="false" output="screen" args="$(arg mname)"/>
+  <node name="explorer" pkg="model_ops" type="explorer.py"  respawn="false" output="screen" args="$(arg mname) 1"/>
+  <node name="controller" pkg="model_ops" type="controller.py"  respawn="false" output="screen" args="$(arg mname)"/>
+
+</launch>

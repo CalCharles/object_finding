@@ -1,0 +1,98 @@
+#!/usr/bin/env python
+
+#this is for a node which takes in at least one input, and responds to it with any number of outputs. All of our nodes follow (in general) this means
+
+#import statements for most of the messages we will need
+import sys
+import tf
+import cv2, time
+from tf2_msgs.msg import TFMessage
+import rospy
+# from kalman_zumy.srv import NuSrv, NuSrvResponse
+from geometry_msgs.msg import Transform, Quaternion, Vector3
+# import exp_quat_func as eqf
+from sensor_msgs.msg import Image
+from cv_bridge import CvBridge, CvBridgeError
+import numpy as np
+
+
+
+command_line_vars = None
+
+#initialize global variables to transfer information to the response
+globalVar = None
+
+#define the publishers
+pub = None
+"more publishers here"
+
+# if we load any results from file, then initialize
+loaded_results = None
+    
+#Define the callback method which is called whenever this node receives a 
+#message on its subscribed topic. The received message is passed as the 
+#first argument to callback().
+def callback(message):
+    global globalVar
+    # Loop until the node is killed with Ctrl-C
+    pub_string = "hello world %s"%rospy.get_time() # define here f(message), or a function on a message
+
+    #publish on many publishers related to this topic on arrival (if necessary)
+    pub.publish(pub_string)
+    "otherpub.publish(message)"
+
+    #assign globalvariables, we almost always need this
+    globalVar = function(message)
+    "put more globalvar assignments here"
+
+
+#Define the method which contains the node's main functionality
+def responder():
+    # initalize the publishers
+    pub = rospy.Publisher('chatter_talk', String, queue_size=10)
+    "more publishers go here"
+
+    rospy.init_node('responder', anonymous=True)
+
+    # subscriber to at least one 
+    rospy.Subscriber("topicRecieving", MessageType, callback)
+    r = rospy.Rate(10) # 10hz
+    while not rospy.is_shutdown():
+
+        #publish on all of my publishing topics
+        pub.publish(pub_string)
+        "otherpub.publish(message)"
+
+        r.sleep()
+    rospy.signal_shutdown("should be dead")
+
+#process some input from the user
+def userfn():
+    ros_img_msg = last_image_service().image_data
+
+    # Convert the ROS message to a NumPy image
+    np_image = ros_to_np_img(ros_img_msg)
+
+    # Display the CV Image
+    cv2.imshow("CV Image", np_image)
+
+    # Tell OpenCV that it should call 'on_mouse_click' when the user
+    # clicks the window. This will add clicked points to our list
+    cv2.setMouseCallback("CV Image", userfn, param=1)
+
+
+
+#Python's syntax for a main() method
+if __name__ == '__main__':
+
+    # extract any of our command line args here
+    command_line_vars = argv[0]
+
+    loaded_results = load("filename")
+
+    # user actions (copied homography stuff) This blocks until the user responds
+    raw_input('Press enter to capture an image:')
+    userfn()
+
+
+    responder()

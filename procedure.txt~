@@ -1,0 +1,25 @@
+Operation procedure:
+
+Initialize:
+pick good grid size in homographies.py
+source devel/setup.bash
+
+roslaunch image_to_grid cam_homo.launch
+	roslaunch lab4_cam run_cam.launch
+	roslaunch ar_track_alvar webcam_track.launch
+roslaunch image_to_grid grid.launch zumy1b 10 16 8
+	rosrun image_to_grid grid_maker.py zumy1b
+	rosrun image_to_grid image_processor 
+	rosrun image_to_grid tag_server.py 10 16 8 True
+roslaunch odroid_machine remote_zumy.launch mname:=zumyXY
+
+IF KALMAN WORKING:
+	rosrun kalman_zumy imu_srv.py zumy1c
+	rosrun kalman_zumy ar_tag_srv.py zumy_tag_no origin_tag_no
+	rosrun kalman_zumy Kalman_filter.py zumy1c
+
+roslaunch image_to_grid model_operations.launch zumy1b
+	rosrun model_ops update_model.py zumy1b
+	rosrun model_ops controller.py zumy1b
+	rosrun model_ops explorer.py zumy1b
+	rosrun model_ops cell_move.py zumy1b

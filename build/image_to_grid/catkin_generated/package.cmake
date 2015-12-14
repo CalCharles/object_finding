@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "image_to_grid")
+set(image_to_grid_MAINTAINER "ee106a-as <ee106a-as@todo.todo>")
+set(image_to_grid_DEPRECATED "")
+set(image_to_grid_VERSION "0.0.0")
+set(image_to_grid_BUILD_DEPENDS "message_generation" "roscpp" "rospy" "std_msgs")
+set(image_to_grid_RUN_DEPENDS "message_runtime" "roscpp" "rospy" "std_msgs")
+set(image_to_grid_BUILDTOOL_DEPENDS "catkin")

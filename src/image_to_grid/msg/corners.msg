@@ -1,0 +1,4 @@
+pixelxy rightBottom
+pixelxy rightTop
+pixelxy leftBottom
+pixelxy leftTop

@@ -1,0 +1,10 @@
+int32 length
+int32 width
+bool[] grid
+int16 zumyx
+int16 zumyy
+int32[] objlstx
+int32[] objlsty
+bool dirty
+int16 foundx
+int16 foundy
